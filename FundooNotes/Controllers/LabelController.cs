@@ -13,14 +13,11 @@ namespace FundooNotes.Controllers
     [ApiController]
     public class LabelController : ControllerBase
     {
-        [Route("api/[controller]")]
-        [ApiController]
-        public class LableController : ControllerBase
-        {
+        
 
             ILabelBL lables;
 
-            public LableController(ILabelBL lables)
+            public LabelController(ILabelBL lables)
             {
                 this.lables = lables;
             }
@@ -104,6 +101,6 @@ namespace FundooNotes.Controllers
                     throw;
                 }
             }
-        }
+        
     }
 }

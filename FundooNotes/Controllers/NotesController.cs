@@ -12,7 +12,7 @@ namespace FundooNotes.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize]
+    
     public class NotesController : ControllerBase
     {
         INoteBL noteBL;
@@ -178,7 +178,7 @@ namespace FundooNotes.Controllers
         }
         [Authorize]
         [HttpGet("ByUser")]
-        public IEnumerable<NoteEntity> GetAllNotesbyuser(long userid)
+        public IEnumerable<NoteEntity> GetAllNotesbyuserid(long userid)
         {
             try
             {
@@ -192,7 +192,7 @@ namespace FundooNotes.Controllers
 
         [Authorize]
         [HttpGet("AllNotes")]
-        public IEnumerable<NoteEntity> GetAllNote()
+        public IEnumerable<NoteEntity> GetAllNotes()
         {
             try
             {

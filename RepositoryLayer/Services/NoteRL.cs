@@ -10,6 +10,7 @@ using System.Linq;
 using CloudinaryDotNet;
 using CloudinaryDotNet.Actions;
 using Account = CloudinaryDotNet.Account;
+using Microsoft.EntityFrameworkCore;
 
 namespace RepositoryLayer.Services
 {
@@ -186,11 +187,22 @@ namespace RepositoryLayer.Services
         }
         public IEnumerable<NoteEntity> GetAllNotes()
         {
-            return context.Notes.ToList();
-        }
-        public IEnumerable<NoteEntity> GetAllNotesbyuserid(long userid)
-        {
-            return context.Notes.Where(n => n.userid == userid).ToList();
+            try
+            {
+                var Note = context.Notes.FirstOrDefault();
+
+                if (Note != null)
+                {
+                    return context.Notes.ToList();
+                }
+
+                return null;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
         }
         public NoteEntity UploadImage(long noteid, IFormFile img)
         {
@@ -199,7 +211,7 @@ namespace RepositoryLayer.Services
                 var noteId = this.context.Notes.FirstOrDefault(e => e.NoteID == noteid);
                 if (noteId != null)
                 {
-                    Account acc = new Account();
+                    Account acc = new Account(CLOUD_NAME, API_KEY, API_Secret);
                     cloud = new Cloudinary(acc);
                     var imagePath = img.OpenReadStream();
                     var uploadParams = new ImageUploadParams()
@@ -225,5 +237,23 @@ namespace RepositoryLayer.Services
             }
         }
 
+        public IEnumerable<NoteEntity> GetAllNotesbyuserid(long userid)
+        {
+            try
+            {
+                var Note = context.Notes.Where(x => x.userid == userid).FirstOrDefault();
+                if (Note != null)
+                {
+                    return context.Notes.Where(list => list.userid == userid).ToList();
+                }
+
+                return null;
+
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
     }
 }

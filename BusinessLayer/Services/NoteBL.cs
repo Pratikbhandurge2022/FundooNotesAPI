@@ -5,6 +5,7 @@ using RepositoryLayer.Entity;
 using RepositoryLayer.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text;
 
 namespace BisinessLayer.Services
@@ -118,12 +119,28 @@ namespace BisinessLayer.Services
 
         public IEnumerable<NoteEntity> GetAllNotesbyuserid(long userid)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return this.noteRL.GetAllNotesbyuserid(userid);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public NoteEntity UploadImage(long noteid, IFormFile img)
         {
-            throw new NotImplementedException();
+            try
+            {
+                return this.noteRL.UploadImage(noteid, img);
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

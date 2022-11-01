@@ -18,6 +18,7 @@ namespace RepositoryLayer.Interfaces
         public NoteEntity Color(long noteid, string color);
         public IEnumerable<NoteEntity> GetAllNotesbyuserid(long userid);
         public IEnumerable<NoteEntity> GetAllNotes();              
-        public NoteEntity UploadImage(long noteid, IFormFile img);
+        public NoteEntity UploadImage(long noteid, IFormFile img);       
+        
     }
 }
