@@ -1,10 +1,15 @@
 ﻿using CommonLayer.Model;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using RepositoryLayer.AppContext;
 using RepositoryLayer.Entity;
 using RepositoryLayer.Interfaces;
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using CloudinaryDotNet;
+using CloudinaryDotNet.Actions;
+using Account = CloudinaryDotNet.Account;
 
 namespace RepositoryLayer.Services
 {
@@ -12,7 +17,11 @@ namespace RepositoryLayer.Services
     {
         private readonly UserContext context;
         private readonly IConfiguration Iconfiguration;
-
+        public const string CLOUD_NAME = "dmovakxin";
+        public const string API_KEY = "288267745118992";
+        public const string API_Secret = "zIue91MG2Mvis25iDzXbl142EWM";
+        public static Cloudinary cloud;
+       
         public NoteRL(UserContext context, IConfiguration Iconfiguration)
         {
             this.context = context;
@@ -30,7 +39,7 @@ namespace RepositoryLayer.Services
                 noteEntity.IsArchive = notes.IsArchive;
                 noteEntity.IsPin = notes.IsPin;
                 noteEntity.IsTrash = notes.IsTrash;
-                noteEntity.userid = userid;
+                noteEntity.Userid = userid;
                 noteEntity.Createat = notes.Createat;
                 noteEntity.Modifiedat = notes.Modifiedat;
                 this.context.Notes.Add(noteEntity);
@@ -168,6 +177,46 @@ namespace RepositoryLayer.Services
                     return note;
                 }
                 return null;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+        public IEnumerable<NoteEntity> GetAllNotes()
+        {
+            return context.Notes.ToList();
+        }
+        public IEnumerable<NoteEntity> GetAllNotesbyuserid(long userid)
+        {
+            return context.Notes.Where(n => n.userid == userid).ToList();
+        }
+        public NoteEntity UploadImage(long noteid, IFormFile img)
+        {
+            try
+            {
+                var noteId = this.context.Notes.FirstOrDefault(e => e.NoteID == noteid);
+                if (noteId != null)
+                {
+                    Account acc = new Account();
+                    cloud = new Cloudinary(acc);
+                    var imagePath = img.OpenReadStream();
+                    var uploadParams = new ImageUploadParams()
+                    {
+                        File = new FileDescription(img.FileName, imagePath)
+                    };
+                    var uploadresult = cloud.Upload(uploadParams);
+                    noteId.Image = img.FileName;
+                    context.Notes.Update(noteId);
+                    int upload = context.SaveChanges();
+                    if (upload > 0)
+                    {
+                        return noteId;
+                    }
+                }
+                return null;
+
             }
             catch (Exception)
             {

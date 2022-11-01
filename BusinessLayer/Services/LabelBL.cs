@@ -9,7 +9,7 @@ namespace BusinessLayer.Services
 {
     public class LabelBL : ILabelBL
     {
-        readonly ILabelRL labelbl;
+        ILabelRL labelbl;
         public LabelBL(ILabelRL labelbl)
         {
             this.labelbl = labelbl;

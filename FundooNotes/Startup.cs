@@ -41,7 +41,7 @@ namespace FundooNotes
             services.AddTransient<ICollabRL, CollabRL>();
             services.AddTransient<ILabelBL, LabelBL>();
             services.AddTransient<ILabelRL, LabelRL>();
-
+            
 
             services.AddSwaggerGen(c =>
             {

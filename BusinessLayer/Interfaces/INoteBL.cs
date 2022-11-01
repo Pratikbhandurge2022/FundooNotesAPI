@@ -1,4 +1,5 @@
 ﻿using CommonLayer.Model;
+using Microsoft.AspNetCore.Http;
 using RepositoryLayer.Entity;
 using System;
 using System.Collections.Generic;
@@ -15,5 +16,8 @@ namespace BisinessLayer.Interfaces
         public NoteEntity IstrashORNot(long noteid);
         public NoteEntity IsArchiveORNot(long noteid);
         public NoteEntity Color(long noteid, string color);
+        IEnumerable<NoteEntity> GetAllNotes();
+        IEnumerable<NoteEntity> GetAllNotesbyuserid(long userid);
+        public NoteEntity UploadImage(long noteid, IFormFile img);
     }
 }

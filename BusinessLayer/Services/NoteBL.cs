@@ -1,5 +1,6 @@
 ﻿using BisinessLayer.Interfaces;
 using CommonLayer.Model;
+using Microsoft.AspNetCore.Http;
 using RepositoryLayer.Entity;
 using RepositoryLayer.Interfaces;
 using System;
@@ -101,6 +102,28 @@ namespace BisinessLayer.Services
 
                 throw;
             }
+        }
+        public IEnumerable<NoteEntity> GetAllNotes()
+        {
+            try
+            {
+                return this.noteRL.GetAllNotes();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        }
+
+        public IEnumerable<NoteEntity> GetAllNotesbyuserid(long userid)
+        {
+            throw new NotImplementedException();
+        }
+
+        public NoteEntity UploadImage(long noteid, IFormFile img)
+        {
+            throw new NotImplementedException();
         }
     }
 }

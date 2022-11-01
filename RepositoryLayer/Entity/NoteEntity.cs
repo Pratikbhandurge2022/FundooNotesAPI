@@ -9,6 +9,8 @@ namespace RepositoryLayer.Entity
 {
     public class NoteEntity
     {
+        internal long Userid;
+
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public long NoteID { get; set; }
