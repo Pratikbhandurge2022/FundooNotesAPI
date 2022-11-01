@@ -7,15 +7,35 @@ using System;
 using Microsoft.AspNetCore.Authorization;
 using RepositoryLayer.Entity;
 using System.Collections.Generic;
+using Microsoft.Extensions.Caching.Distributed;
+using Microsoft.Extensions.Caching.Memory;
+using Microsoft.Extensions.Configuration;
+using RepositoryLayer.AppContext;
+using Newtonsoft.Json;
+using System.Text;
 
 namespace FundooNotes.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    
+
     public class NotesController : ControllerBase
     {
         INoteBL noteBL;
+
+        private IConfiguration _config;
+        private UserContext fundooContext;
+        private readonly IDistributedCache _cache;
+        private readonly IMemoryCache _memoryCache;
+        public NotesController(INoteBL noteBL, IConfiguration config, UserContext fundooContext, IDistributedCache cache, IMemoryCache memoryCache)
+        {
+            this.noteBL = noteBL;
+            this._config =config;
+            this.fundooContext = fundooContext;
+            this._cache = cache;
+            this._memoryCache = memoryCache;
+
+        }
 
         public NotesController(INoteBL noteBL)
         {
@@ -225,7 +245,6 @@ namespace FundooNotes.Controllers
                 throw;
             }
         }
-
-
+        
     }
 }

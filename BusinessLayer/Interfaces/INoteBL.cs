@@ -19,5 +19,6 @@ namespace BisinessLayer.Interfaces
         IEnumerable<NoteEntity> GetAllNotes();
         IEnumerable<NoteEntity> GetAllNotesbyuserid(long userid);
         public NoteEntity UploadImage(long noteid, IFormFile img);
+        
     }
 }
