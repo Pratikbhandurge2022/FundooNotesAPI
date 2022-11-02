@@ -3,6 +3,7 @@ using CommonLayer.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Linq;
 using System.Security.Claims;
@@ -15,9 +16,11 @@ namespace FundooNotes.Controllers
     {
         IUserBL userBL;
 
-        public UsersController(IUserBL userBL)
+        private readonly ILogger<UsersController> logger;
+        public UsersController(IUserBL userBL,ILogger<UsersController> logger)
         {
             this.userBL = userBL;
+            this.logger = logger;
         }
         [HttpPost("Register")]
 
@@ -28,11 +31,13 @@ namespace FundooNotes.Controllers
                 var reg = this.userBL.Registration(userRegistration);
                 if (reg != null)
                 {
-                    return this.Ok(new { Success = true, message = $"Registration sucessful for {userRegistration.Email}" });
+                    logger.LogInformation("Registration is sucess");
+                    return this.Ok(new { Success = true, message = "Registration Sucessfull", Response = reg });
                 }
                 else
                 {
-                    return this.BadRequest(new { Sucess = false, message = $"Registration failed for {userRegistration.Email}" });
+                    logger.LogInformation("Registration is unsucess");
+                    return this.BadRequest(new { Success = false, message = "Registration Unsucessfull" });
                 }
             }
             catch (Exception)
@@ -48,10 +53,12 @@ namespace FundooNotes.Controllers
                 string Login = this.userBL.LoginUser(loginUser);
                 if (Login != null)
                 {
+                    logger.LogInformation("Login is sucess");
                     return this.Ok(new { success = true, message = $"login successful for {loginUser.Email}", data = Login });
                 }
                 else
                 {
+                    logger.LogInformation("This is an error message");
                     return this.BadRequest(new { Success = false, message = $"login failed for {loginUser.Email}" });
 
                 }
