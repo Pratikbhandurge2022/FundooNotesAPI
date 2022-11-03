@@ -22,7 +22,7 @@ namespace RepositoryLayer.Services
         public const string API_KEY = "288267745118992";
         public const string API_Secret = "zIue91MG2Mvis25iDzXbl142EWM";
         public static Cloudinary cloud;
-       
+
         public NoteRL(UserContext context, IConfiguration Iconfiguration)
         {
             this.context = context;
@@ -40,7 +40,7 @@ namespace RepositoryLayer.Services
                 noteEntity.IsArchive = notes.IsArchive;
                 noteEntity.IsPin = notes.IsPin;
                 noteEntity.IsTrash = notes.IsTrash;
-                noteEntity.Userid = userid;
+                noteEntity.userid = userid;
                 noteEntity.Createat = notes.Createat;
                 noteEntity.Modifiedat = notes.Modifiedat;
                 this.context.Notes.Add(noteEntity);
@@ -57,6 +57,7 @@ namespace RepositoryLayer.Services
 
                 throw;
             }
+            
         }
         public bool DeleteNote(long noteid)
         {
@@ -83,7 +84,7 @@ namespace RepositoryLayer.Services
                 NoteEntity result = context.Notes.Where(e => e.NoteID == noteid).FirstOrDefault();
                 if (result != null)
                 {
-                
+
                     result.Title = notes.Title;
                     result.Note = notes.Note;
                     result.Color = notes.Color;
@@ -257,3 +258,5 @@ namespace RepositoryLayer.Services
         }
     }
 }
+
+    

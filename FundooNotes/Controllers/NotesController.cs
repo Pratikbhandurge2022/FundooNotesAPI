@@ -21,7 +21,7 @@ namespace FundooNotes.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-
+    [Authorize]
     public class NotesController : ControllerBase
     {
         readonly INoteBL noteBL;
@@ -30,7 +30,7 @@ namespace FundooNotes.Controllers
         private UserContext fundooContext;
         private IDistributedCache cache;
         private IMemoryCache memoryCache;
-        
+
         public NotesController(INoteBL noteBL, IConfiguration config, UserContext fundooContext, IDistributedCache cache, IMemoryCache memoryCache)
         {
             this.noteBL = noteBL;
@@ -43,8 +43,6 @@ namespace FundooNotes.Controllers
 
         
         [HttpPost("AddNote")]
-
-
         public IActionResult AddNote(NoteModel noteModel)
         {
             try
@@ -245,7 +243,7 @@ namespace FundooNotes.Controllers
 
                 throw;
             }
-            
+
         }
         [HttpGet("RedisCache")]
         public async Task<IActionResult> GetAllNotesUsingRedisCache()
@@ -270,8 +268,6 @@ namespace FundooNotes.Controllers
             }
             return this.Ok(NotesList);
         }
-
-
 
     }
 }
