@@ -1,0 +1,124 @@
+2022-11-04 11:47:47.6774 DEBUG Hosting starting
+2022-11-04 11:47:47.7776 INFO User profile is available. Using 'C:\Users\prati\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-04 11:47:47.7932 DEBUG Reading data from file 'C:\Users\prati\AppData\Local\ASP.NET\DataProtection-Keys\key-35f23650-eba7-4e2c-85f3-af0f57058658.xml'.
+2022-11-04 11:47:47.8053 DEBUG Found key {35f23650-eba7-4e2c-85f3-af0f57058658}.
+2022-11-04 11:47:47.8154 DEBUG Considering key {35f23650-eba7-4e2c-85f3-af0f57058658} with expiration date 2023-01-19 06:10:20Z as default key.
+2022-11-04 11:47:47.8778 DEBUG Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=3.1.28.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2022-11-04 11:47:47.8778 DEBUG Decrypting secret element using Windows DPAPI.
+2022-11-04 11:47:47.8778 DEBUG Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=3.1.28.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2022-11-04 11:47:47.8778 DEBUG Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC.
+2022-11-04 11:47:47.8778 DEBUG Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC.
+2022-11-04 11:47:47.8778 DEBUG Using key {35f23650-eba7-4e2c-85f3-af0f57058658} as the default key.
+2022-11-04 11:47:47.8778 DEBUG Key ring with default key {35f23650-eba7-4e2c-85f3-af0f57058658} was loaded during application startup.
+2022-11-04 11:47:48.2964 DEBUG Loaded hosting startup assembly FundooNotes
+2022-11-04 11:47:48.2964 DEBUG Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-11-04 11:47:48.2964 DEBUG Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-11-04 11:47:48.2985 INFO Application started. Press Ctrl+C to shut down.
+2022-11-04 11:47:48.2985 INFO Hosting environment: Development
+2022-11-04 11:47:48.2985 INFO Content root path: D:\pratik\FundooNotes
+2022-11-04 11:47:48.2985 DEBUG Hosting started
+2022-11-04 11:47:48.3678 INFO Request starting HTTP/2.0 GET https://localhost:44359/Swagger  
+2022-11-04 11:47:48.4107 DEBUG Wildcard detected, all requests with hosts will be allowed.
+2022-11-04 11:47:48.4107 TRACE All hosts are allowed.
+2022-11-04 11:47:48.4400 DEBUG No candidates found for the request path '/Swagger'
+2022-11-04 11:47:48.4400 DEBUG Request did not match any endpoints
+2022-11-04 11:47:48.6235 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2022-11-04 11:47:48.7727 DEBUG Connection ID "18302628903618871448" disconnecting.
+2022-11-04 11:47:48.7727 INFO Request starting HTTP/2.0 GET https://localhost:44359/Swagger/index.html  
+2022-11-04 11:47:48.7727 TRACE All hosts are allowed.
+2022-11-04 11:47:48.7727 DEBUG No candidates found for the request path '/Swagger/index.html'
+2022-11-04 11:47:48.7727 DEBUG Request did not match any endpoints
+2022-11-04 11:47:48.7727 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2022-11-04 11:47:48.7727 INFO Request finished in 410.0581ms 301 
+2022-11-04 11:47:48.8517 DEBUG Response markup is scheduled to include browser refresh script injection.
+2022-11-04 11:47:49.0952 DEBUG Response markup was updated to include browser refresh script injection.
+2022-11-04 11:47:49.0952 INFO Request finished in 324.2458ms 200 text/html;charset=utf-8
+2022-11-04 11:47:49.1496 INFO Request starting HTTP/2.0 GET https://localhost:44359/Swagger/swagger-ui.css  
+2022-11-04 11:47:49.1496 INFO Request starting HTTP/2.0 GET https://localhost:44359/Swagger/swagger-ui-bundle.js  
+2022-11-04 11:47:49.1496 INFO Request starting HTTP/2.0 GET https://localhost:44359/Swagger/swagger-ui-standalone-preset.js  
+2022-11-04 11:47:49.1496 INFO Request starting HTTP/2.0 GET https://localhost:44359/_vs/browserLink  
+2022-11-04 11:47:49.1496 TRACE All hosts are allowed.
+2022-11-04 11:47:49.1496 TRACE All hosts are allowed.
+2022-11-04 11:47:49.1496 INFO Request starting HTTP/2.0 GET https://localhost:44359/_framework/aspnetcore-browser-refresh.js  
+2022-11-04 11:47:49.1496 DEBUG No candidates found for the request path '/Swagger/swagger-ui.css'
+2022-11-04 11:47:49.1496 TRACE All hosts are allowed.
+2022-11-04 11:47:49.1496 DEBUG No candidates found for the request path '/Swagger/swagger-ui-bundle.js'
+2022-11-04 11:47:49.1496 DEBUG Request did not match any endpoints
+2022-11-04 11:47:49.1496 DEBUG Request did not match any endpoints
+2022-11-04 11:47:49.1496 DEBUG No candidates found for the request path '/Swagger/swagger-ui-standalone-preset.js'
+2022-11-04 11:47:49.1496 DEBUG Request did not match any endpoints
+2022-11-04 11:47:49.1496 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2022-11-04 11:47:49.1496 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2022-11-04 11:47:49.1496 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2022-11-04 11:47:49.1568 INFO Request finished in 6.6591ms 200 application/javascript; charset=utf-8
+2022-11-04 11:47:49.1568 TRACE Range header's value is empty.
+2022-11-04 11:47:49.1568 TRACE Range header's value is empty.
+2022-11-04 11:47:49.1568 TRACE Range header's value is empty.
+2022-11-04 11:47:49.1920 INFO Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-11-04 11:47:49.1920 INFO Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-11-04 11:47:49.1920 INFO Request finished in 42.3021ms 200 application/javascript
+2022-11-04 11:47:49.1920 INFO Request finished in 42.7874ms 200 text/css
+2022-11-04 11:47:49.1920 INFO Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-11-04 11:47:49.1920 INFO Request finished in 48.5428ms 200 application/javascript
+2022-11-04 11:47:49.2590 INFO Request finished in 108.8577ms 200 text/javascript; charset=UTF-8
+2022-11-04 11:47:49.9057 INFO Request starting HTTP/2.0 GET https://localhost:44359/swagger/v1/swagger.json  
+2022-11-04 11:47:49.9116 TRACE All hosts are allowed.
+2022-11-04 11:47:49.9116 DEBUG No candidates found for the request path '/swagger/v1/swagger.json'
+2022-11-04 11:47:49.9116 DEBUG Request did not match any endpoints
+2022-11-04 11:47:49.9116 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2022-11-04 11:47:50.0882 INFO Request finished in 182.621ms 200 application/json;charset=utf-8
+2022-11-04 11:48:57.2546 INFO Request starting HTTP/1.1 POST https://localhost:44359/api/Notes/RedisCache application/json 56
+2022-11-04 11:48:57.2546 TRACE All hosts are allowed.
+2022-11-04 11:48:57.2546 DEBUG 1 candidate(s) found for the request path '/api/Notes/RedisCache'
+2022-11-04 11:48:57.2546 DEBUG Request matched endpoint '405 HTTP Method Not Supported'
+2022-11-04 11:48:57.2546 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2022-11-04 11:48:57.2674 DEBUG Static files was skipped as the request already matched an endpoint.
+2022-11-04 11:48:57.2674 INFO Executing endpoint '405 HTTP Method Not Supported'
+2022-11-04 11:48:57.2674 INFO Executed endpoint '405 HTTP Method Not Supported'
+2022-11-04 11:48:57.2674 INFO Request finished in 19.1137ms 405 
+2022-11-04 11:49:54.2800 INFO Request starting HTTP/1.1 GET https://localhost:44359/api/Notes/RedisCache application/json 56
+2022-11-04 11:49:54.2800 TRACE All hosts are allowed.
+2022-11-04 11:49:54.2824 DEBUG 1 candidate(s) found for the request path '/api/Notes/RedisCache'
+2022-11-04 11:49:54.2824 DEBUG Endpoint 'FundooNotes.Controllers.NotesController.GetAllNotesUsingRedisCache (FundooNotes)' with route pattern 'api/Notes/RedisCache' is valid for the request path '/api/Notes/RedisCache'
+2022-11-04 11:49:54.2824 DEBUG Request matched endpoint 'FundooNotes.Controllers.NotesController.GetAllNotesUsingRedisCache (FundooNotes)'
+2022-11-04 11:49:54.2824 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2022-11-04 11:49:54.2824 INFO Authorization failed.
+2022-11-04 11:49:54.2824 INFO AuthenticationScheme: Bearer was challenged.
+2022-11-04 11:49:54.2824 INFO Request finished in 16.4912ms 401 
+2022-11-04 11:50:24.5205 INFO Request starting HTTP/1.1 GET https://localhost:44359/api/Notes/RedisCache application/json 56
+2022-11-04 11:50:24.5205 TRACE All hosts are allowed.
+2022-11-04 11:50:24.5205 DEBUG 1 candidate(s) found for the request path '/api/Notes/RedisCache'
+2022-11-04 11:50:24.5205 DEBUG Endpoint 'FundooNotes.Controllers.NotesController.GetAllNotesUsingRedisCache (FundooNotes)' with route pattern 'api/Notes/RedisCache' is valid for the request path '/api/Notes/RedisCache'
+2022-11-04 11:50:24.5205 DEBUG Request matched endpoint 'FundooNotes.Controllers.NotesController.GetAllNotesUsingRedisCache (FundooNotes)'
+2022-11-04 11:50:24.5205 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2022-11-04 11:50:24.5205 INFO Authorization failed.
+2022-11-04 11:50:24.5205 INFO AuthenticationScheme: Bearer was challenged.
+2022-11-04 11:50:24.5205 INFO Request finished in 9.8371ms 401 
+2022-11-04 11:50:55.5624 INFO Request starting HTTP/1.1 GET https://localhost:44359/api/Login/Users application/json 56
+2022-11-04 11:50:55.5635 TRACE All hosts are allowed.
+2022-11-04 11:50:55.5635 DEBUG No candidates found for the request path '/api/Login/Users'
+2022-11-04 11:50:55.5635 DEBUG Request did not match any endpoints
+2022-11-04 11:50:55.5635 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2022-11-04 11:50:55.5635 DEBUG The request path  does not match the path filter
+2022-11-04 11:50:55.5635 INFO Request finished in 6.0062ms 404 
+2022-11-04 11:50:59.9511 INFO Request starting HTTP/1.1 POST https://localhost:44359/api/Login/Users application/json 56
+2022-11-04 11:50:59.9511 TRACE All hosts are allowed.
+2022-11-04 11:50:59.9511 DEBUG No candidates found for the request path '/api/Login/Users'
+2022-11-04 11:50:59.9511 DEBUG Request did not match any endpoints
+2022-11-04 11:50:59.9511 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2022-11-04 11:50:59.9511 DEBUG POST requests are not supported
+2022-11-04 11:50:59.9511 INFO Request finished in 3.9047ms 404 
+2022-11-04 11:52:35.7338 INFO Request starting HTTP/1.1 GET https://localhost:44359/api/Register/Users application/json 90
+2022-11-04 11:52:35.7357 TRACE All hosts are allowed.
+2022-11-04 11:52:35.7357 DEBUG No candidates found for the request path '/api/Register/Users'
+2022-11-04 11:52:35.7357 DEBUG Request did not match any endpoints
+2022-11-04 11:52:35.7357 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2022-11-04 11:52:35.7357 DEBUG The request path  does not match the path filter
+2022-11-04 11:52:35.7357 INFO Request finished in 4.5226ms 404 
+2022-11-04 11:52:38.8814 INFO Request starting HTTP/1.1 POST https://localhost:44359/api/Register/Users application/json 90
+2022-11-04 11:52:38.8814 TRACE All hosts are allowed.
+2022-11-04 11:52:38.8814 DEBUG No candidates found for the request path '/api/Register/Users'
+2022-11-04 11:52:38.8814 DEBUG Request did not match any endpoints
+2022-11-04 11:52:38.8814 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2022-11-04 11:52:38.8814 DEBUG POST requests are not supported
+2022-11-04 11:52:38.8814 INFO Request finished in 2.1023ms 404 

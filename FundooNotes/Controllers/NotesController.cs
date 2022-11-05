@@ -41,7 +41,7 @@ namespace FundooNotes.Controllers
 
         }
 
-        
+
         [HttpPost("AddNote")]
         public IActionResult AddNote(NoteModel noteModel)
         {
@@ -245,6 +245,7 @@ namespace FundooNotes.Controllers
             }
 
         }
+        [Authorize]
         [HttpGet("RedisCache")]
         public async Task<IActionResult> GetAllNotesUsingRedisCache()
         {
