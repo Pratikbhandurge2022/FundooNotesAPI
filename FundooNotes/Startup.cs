@@ -28,7 +28,7 @@ namespace FundooNotes
 
         public IConfiguration Configuration { get; }
 
-        
+
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<UserContext>(opts => opts.UseSqlServer(Configuration["ConnectionString:FundooNotes"]));
@@ -88,8 +88,17 @@ namespace FundooNotes
                     ValidateAudience = false,
                     ValidateLifetime = false,
                     ValidateIssuerSigningKey = true,
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"])) 
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]))
                 };
+            });
+            services.AddCors(options =>
+            {
+                options.AddPolicy(
+                name: "AllowOrigin",
+              builder =>
+              {
+                  builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+              });
             });
         }
 

@@ -41,7 +41,7 @@ namespace FundooNotes.Controllers
 
         }
 
-
+        [Authorize]
         [HttpPost("AddNote")]
         public IActionResult AddNote(NoteModel noteModel)
         {
