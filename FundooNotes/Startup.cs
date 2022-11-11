@@ -47,6 +47,15 @@ namespace FundooNotes
             {
                 options.Configuration = "localhost:6379";
             });
+            services.AddCors(options =>
+            {
+                options.AddPolicy(
+                name: "AllowOrigin",
+              builder =>
+              {
+                  builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
+              });
+            });
 
             services.AddSwaggerGen(c =>
             {
@@ -91,15 +100,7 @@ namespace FundooNotes
                     IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Jwt:Key"]))
                 };
             });
-            services.AddCors(options =>
-            {
-                options.AddPolicy(
-                name: "AllowOrigin",
-              builder =>
-              {
-                  builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader();
-              });
-            });
+            
         }
 
        
@@ -110,6 +111,7 @@ namespace FundooNotes
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors("AllowOrigin");
             app.UseHttpsRedirection();
 
             app.UseRouting();
