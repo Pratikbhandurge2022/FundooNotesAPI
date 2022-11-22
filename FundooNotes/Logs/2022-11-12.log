@@ -1,0 +1,79 @@
+2022-11-12 08:32:31.2891 DEBUG Hosting starting
+2022-11-12 08:32:31.4389 INFO User profile is available. Using 'C:\Users\prati\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2022-11-12 08:32:31.4606 DEBUG Reading data from file 'C:\Users\prati\AppData\Local\ASP.NET\DataProtection-Keys\key-35f23650-eba7-4e2c-85f3-af0f57058658.xml'.
+2022-11-12 08:32:31.4800 DEBUG Found key {35f23650-eba7-4e2c-85f3-af0f57058658}.
+2022-11-12 08:32:31.4950 DEBUG Considering key {35f23650-eba7-4e2c-85f3-af0f57058658} with expiration date 2023-01-19 06:10:20Z as default key.
+2022-11-12 08:32:31.5530 DEBUG Forwarded activator type request from Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Version=3.1.28.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.XmlEncryption.DpapiXmlDecryptor, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2022-11-12 08:32:31.5530 DEBUG Decrypting secret element using Windows DPAPI.
+2022-11-12 08:32:31.5530 DEBUG Forwarded activator type request from Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Version=3.1.28.0, Culture=neutral, PublicKeyToken=adb9793829ddae60 to Microsoft.AspNetCore.DataProtection.AuthenticatedEncryption.ConfigurationModel.AuthenticatedEncryptorDescriptorDeserializer, Microsoft.AspNetCore.DataProtection, Culture=neutral, PublicKeyToken=adb9793829ddae60
+2022-11-12 08:32:31.5530 DEBUG Opening CNG algorithm 'AES' from provider '(null)' with chaining mode CBC.
+2022-11-12 08:32:31.5635 DEBUG Opening CNG algorithm 'SHA256' from provider '(null)' with HMAC.
+2022-11-12 08:32:31.5635 DEBUG Using key {35f23650-eba7-4e2c-85f3-af0f57058658} as the default key.
+2022-11-12 08:32:31.5635 DEBUG Key ring with default key {35f23650-eba7-4e2c-85f3-af0f57058658} was loaded during application startup.
+2022-11-12 08:32:34.7479 DEBUG Loaded hosting startup assembly FundooNotes
+2022-11-12 08:32:34.7479 DEBUG Loaded hosting startup assembly Microsoft.AspNetCore.Watch.BrowserRefresh
+2022-11-12 08:32:34.7479 DEBUG Loaded hosting startup assembly Microsoft.WebTools.BrowserLink.Net
+2022-11-12 08:32:34.7479 INFO Application started. Press Ctrl+C to shut down.
+2022-11-12 08:32:34.7479 INFO Hosting environment: Development
+2022-11-12 08:32:34.7479 INFO Content root path: D:\pratik\FundooNotes
+2022-11-12 08:32:34.7479 DEBUG Hosting started
+2022-11-12 08:32:34.8351 INFO Request starting HTTP/2.0 GET https://localhost:44359/Swagger  
+2022-11-12 08:32:34.8954 DEBUG Wildcard detected, all requests with hosts will be allowed.
+2022-11-12 08:32:34.8954 TRACE All hosts are allowed.
+2022-11-12 08:32:34.9360 DEBUG No candidates found for the request path '/Swagger'
+2022-11-12 08:32:34.9360 DEBUG Request did not match any endpoints
+2022-11-12 08:32:35.0972 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2022-11-12 08:32:35.1802 DEBUG Connection ID "18302628903618871297" disconnecting.
+2022-11-12 08:32:35.1802 INFO Request starting HTTP/2.0 GET https://localhost:44359/Swagger/index.html  
+2022-11-12 08:32:35.1802 TRACE All hosts are allowed.
+2022-11-12 08:32:35.1802 DEBUG No candidates found for the request path '/Swagger/index.html'
+2022-11-12 08:32:35.1802 DEBUG Request did not match any endpoints
+2022-11-12 08:32:35.1802 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2022-11-12 08:32:35.1802 INFO Request finished in 348.7022ms 301 
+2022-11-12 08:32:35.2603 DEBUG Response markup is scheduled to include browser refresh script injection.
+2022-11-12 08:32:35.6175 DEBUG Response markup was updated to include browser refresh script injection.
+2022-11-12 08:32:35.6175 INFO Request finished in 439.1009ms 200 text/html;charset=utf-8
+2022-11-12 08:32:35.6175 INFO Request starting HTTP/2.0 GET https://localhost:44359/Swagger/swagger-ui.css  
+2022-11-12 08:32:35.6175 INFO Request starting HTTP/2.0 GET https://localhost:44359/Swagger/swagger-ui-standalone-preset.js  
+2022-11-12 08:32:35.6175 INFO Request starting HTTP/2.0 GET https://localhost:44359/Swagger/swagger-ui-bundle.js  
+2022-11-12 08:32:35.6175 TRACE All hosts are allowed.
+2022-11-12 08:32:35.6175 TRACE All hosts are allowed.
+2022-11-12 08:32:35.6175 TRACE All hosts are allowed.
+2022-11-12 08:32:35.6175 DEBUG No candidates found for the request path '/Swagger/swagger-ui.css'
+2022-11-12 08:32:35.6175 DEBUG No candidates found for the request path '/Swagger/swagger-ui-standalone-preset.js'
+2022-11-12 08:32:35.6175 DEBUG No candidates found for the request path '/Swagger/swagger-ui-bundle.js'
+2022-11-12 08:32:35.6175 DEBUG Request did not match any endpoints
+2022-11-12 08:32:35.6175 DEBUG Request did not match any endpoints
+2022-11-12 08:32:35.6175 DEBUG Request did not match any endpoints
+2022-11-12 08:32:35.6308 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2022-11-12 08:32:35.6308 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2022-11-12 08:32:35.6308 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2022-11-12 08:32:35.6308 TRACE Range header's value is empty.
+2022-11-12 08:32:35.6308 TRACE Range header's value is empty.
+2022-11-12 08:32:35.6308 TRACE Range header's value is empty.
+2022-11-12 08:32:35.6747 INFO Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2022-11-12 08:32:35.6747 INFO Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2022-11-12 08:32:35.6747 INFO Request finished in 50.1682ms 200 text/css
+2022-11-12 08:32:35.6747 INFO Request finished in 50.1495ms 200 application/javascript
+2022-11-12 08:32:35.6847 INFO Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2022-11-12 08:32:35.6847 INFO Request finished in 59.9172ms 200 application/javascript
+2022-11-12 08:32:35.7004 INFO Request starting HTTP/2.0 GET https://localhost:44359/_framework/aspnetcore-browser-refresh.js  
+2022-11-12 08:32:35.7004 INFO Request finished in 2.8527ms 200 application/javascript; charset=utf-8
+2022-11-12 08:32:35.7201 INFO Request starting HTTP/2.0 GET https://localhost:44359/_vs/browserLink  
+2022-11-12 08:32:35.8231 INFO Request finished in 103.0258ms 200 text/javascript; charset=UTF-8
+2022-11-12 08:32:36.2527 INFO Request starting HTTP/2.0 GET https://localhost:44359/swagger/v1/swagger.json  
+2022-11-12 08:32:36.2527 TRACE All hosts are allowed.
+2022-11-12 08:32:36.2527 DEBUG No candidates found for the request path '/swagger/v1/swagger.json'
+2022-11-12 08:32:36.2527 DEBUG Request did not match any endpoints
+2022-11-12 08:32:36.2527 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2022-11-12 08:32:36.4016 INFO Request finished in 148.9841ms 200 application/json;charset=utf-8
+2022-11-12 09:07:16.0410 INFO Request starting HTTP/2.0 GET https://localhost:44359/_vs/browserLink  
+2022-11-12 09:07:16.0410 INFO Request starting HTTP/2.0 GET https://localhost:44359/_framework/aspnetcore-browser-refresh.js  
+2022-11-12 09:07:16.0775 INFO Request finished in 38.2495ms 200 application/javascript; charset=utf-8
+2022-11-12 09:07:16.1330 INFO Request finished in 99.9814ms 200 text/javascript; charset=UTF-8
+2022-11-12 09:07:16.3693 INFO Request starting HTTP/2.0 GET https://localhost:44359/swagger/v1/swagger.json  
+2022-11-12 09:07:16.3693 TRACE All hosts are allowed.
+2022-11-12 09:07:16.3851 DEBUG No candidates found for the request path '/swagger/v1/swagger.json'
+2022-11-12 09:07:16.3851 DEBUG Request did not match any endpoints
+2022-11-12 09:07:16.3851 DEBUG AuthenticationScheme: Bearer was not authenticated.
+2022-11-12 09:07:16.4591 INFO Request finished in 89.8963ms 200 application/json;charset=utf-8
