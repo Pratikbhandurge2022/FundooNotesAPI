@@ -137,11 +137,11 @@ namespace FundooNotes.Controllers
                 var result = noteBL.IstrashORNot(noteid);
                 if (result != null)
                 {
-                    return this.Ok(new { message = "Note Restored ", Response = result });
+                    return this.BadRequest(new { message = "Note Restored ", Response = result });
                 }
                 else
                 {
-                    return this.BadRequest(new { message = "Note is in trash" });
+                    return this.Ok(new { message = "Note is in trash" });
                 }
             }
             catch (Exception)
@@ -160,11 +160,11 @@ namespace FundooNotes.Controllers
                 var result = noteBL.IsArchiveORNot(noteid);
                 if (result != null)
                 {
-                    return this.BadRequest(new { message = "Note Unarchived ", Response = result });
+                    return this.Ok(new { Sucess = true , message = "Note Archived Successfully ", Response = result });
                 }
                 else
                 {
-                    return this.Ok(new { message = "Note Archived Successfully" });
+                    return this.BadRequest(new { Sucess = false , message = "Note UnArchived" });
                 }
             }
             catch (Exception)

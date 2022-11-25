@@ -172,7 +172,7 @@ namespace RepositoryLayer.Services
             try
             {
                 NoteEntity note = this.context.Notes.FirstOrDefault(x => x.NoteID == noteid);
-                if (note.Color != null)
+                if (note != null)
                 {
                     note.Color = color;
                     this.context.SaveChanges();
